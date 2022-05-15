@@ -29,9 +29,7 @@ public class AccessFilter implements Filter {
         HttpServletRequest request = (HttpServletRequest) servletRequest;
         HttpServletResponse response = (HttpServletResponse) servletResponse;
         String path = request.getRequestURI();
-        if(!path.equals("/home") && !path.equals("/")) {
-            int i = 1;
-        }
+
         if(path.contains("addExhibition")
                 || path.contains("addHall")
                 || path.contains("getStatistics")

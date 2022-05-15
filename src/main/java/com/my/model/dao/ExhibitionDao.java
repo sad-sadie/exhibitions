@@ -3,7 +3,7 @@ package com.my.model.dao;
 import com.my.model.entities.Exhibition;
 import com.my.model.entities.Hall;
 
-import java.sql.Date;
+import java.time.LocalDate;
 import java.util.List;
 import java.util.Map;
 
@@ -38,7 +38,7 @@ public interface ExhibitionDao extends GenericDao<Exhibition> {
      * @param pageNum - number of the page to be shown.
      * @param par - chosen parameter.
      */
-    public List<Exhibition> getExhibitionsOnPageByParameter(int pageNum, String par);
+    List<Exhibition> getExhibitionsOnPageByParameter(int pageNum, String par);
 
 
     /**
@@ -47,19 +47,19 @@ public interface ExhibitionDao extends GenericDao<Exhibition> {
      * @param pageNum - number of the page to be shown.
      * @param date - chosen date.
      */
-    public List<Exhibition> getExhibitionsOnPageByDate(int pageNum, Date date);
+    List<Exhibition> getExhibitionsOnPageByDate(int pageNum, LocalDate date);
 
 
     /**
      * The method gets number of exhibitions for page display.
      */
-    public int getNumberOfExhibitions();
+    int getNumberOfExhibitions();
 
 
     /**
      * The method gets number of exhibitions for page display by date.
      */
-    public int getNumberOfExhibitionsByDate(Date date);
+    int getNumberOfExhibitionsByDate(LocalDate date);
 
 
     /**
@@ -67,7 +67,7 @@ public interface ExhibitionDao extends GenericDao<Exhibition> {
      *
      * @param id - exhibition's id.
      */
-    public List<Hall> getHalls(long id);
+    List<Hall> getHalls(long id);
 
 
     /**

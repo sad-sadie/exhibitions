@@ -11,12 +11,8 @@ import com.my.model.entities.User;
 import com.my.model.services.UserService;
 import org.apache.log4j.Logger;
 
-import java.sql.Connection;
-import java.sql.Date;
-import java.sql.PreparedStatement;
-import java.sql.ResultSet;
-import java.sql.SQLException;
-import java.sql.Statement;
+import java.sql.*;
+import java.time.LocalDate;
 import java.util.Comparator;
 import java.util.LinkedHashMap;
 import java.util.List;
@@ -44,10 +40,10 @@ public class ExhibitionDaoImpl implements ExhibitionDao {
             int i = 1;
             ps.setString(i++, entity.getTheme());
             ps.setString(i++, entity.getDescription());
-            ps.setDate(i++, entity.getStartDate());
-            ps.setDate(i++, entity.getEndDate());
-            ps.setTime(i++, entity.getStartTime());
-            ps.setTime(i++, entity.getEndTime());
+            ps.setDate(i++, Date.valueOf(entity.getStartDate()));
+            ps.setDate(i++, Date.valueOf(entity.getEndDate()));
+            ps.setTime(i++, Time.valueOf(entity.getStartTime()));
+            ps.setTime(i++, Time.valueOf(entity.getEndTime()));
             ps.setDouble(i, entity.getPrice());
 
             ps.executeUpdate();
@@ -99,10 +95,10 @@ public class ExhibitionDaoImpl implements ExhibitionDao {
             int i = 1;
             ps.setString(i++, entity.getTheme());
             ps.setString(i++, entity.getDescription());
-            ps.setDate(i++, entity.getStartDate());
-            ps.setDate(i++, entity.getEndDate());
-            ps.setTime(i++, entity.getStartTime());
-            ps.setTime(i++, entity.getEndTime());
+            ps.setDate(i++, Date.valueOf(entity.getStartDate()));
+            ps.setDate(i++, Date.valueOf(entity.getEndDate()));
+            ps.setTime(i++, Time.valueOf(entity.getStartTime()));
+            ps.setTime(i++, Time.valueOf(entity.getEndTime()));
             ps.setDouble(i++, entity.getPrice());
             ps.setLong(i, entity.getId());
 
@@ -200,12 +196,12 @@ public class ExhibitionDaoImpl implements ExhibitionDao {
 
 
     @Override
-    public List<Exhibition> getExhibitionsOnPageByDate(int pageNum, Date date) {
+    public List<Exhibition> getExhibitionsOnPageByDate(int pageNum, LocalDate date) {
         List<Exhibition> exhibitions = new CopyOnWriteArrayList<>();
 
         try(PreparedStatement ps = con.prepareStatement(ExhibitionConstants.GET_BY_DATE)){
 
-            ps.setDate(1, date);
+            ps.setDate(1, Date.valueOf(date));
             ps.setInt(2, (pageNum - 1) * 5);
 
             ResultSet rs = ps.executeQuery();
@@ -220,12 +216,12 @@ public class ExhibitionDaoImpl implements ExhibitionDao {
     }
 
     @Override
-    public int getNumberOfExhibitionsByDate(Date date) {
+    public int getNumberOfExhibitionsByDate(LocalDate date) {
         int numberOfExhibitions = 0;
 
         try(PreparedStatement ps = con.prepareStatement(ExhibitionConstants.GET_NUMBER_BY_DATE)) {
 
-            ps.setDate(1, date);
+            ps.setDate(1, Date.valueOf(date));
             ResultSet rs = ps.executeQuery();
 
             while (rs.next()) {

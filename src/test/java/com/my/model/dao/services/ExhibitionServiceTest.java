@@ -14,6 +14,8 @@ import java.sql.Connection;
 import java.sql.Date;
 import java.sql.SQLException;
 import java.sql.Time;
+import java.time.LocalDate;
+import java.time.LocalTime;
 import java.util.List;
 import java.util.NoSuchElementException;
 import java.util.Optional;
@@ -44,8 +46,8 @@ public class ExhibitionServiceTest {
 
     @Test
     public void add() {
-        final Date date = new Date(0);
-        final Time time = new Time(0);
+        final LocalDate date = new Date(0).toLocalDate();
+        final LocalTime time = new Time(0).toLocalTime();
         Exhibition expected = Exhibition.builder()
                 .id(320L)
                 .theme("theme")
@@ -69,10 +71,8 @@ public class ExhibitionServiceTest {
 
     @Test
     public void findAll() {
-        final Date date = new Date(0);
-        final Time time = new Time(0);
-
-
+        final LocalDate date = new Date(0).toLocalDate();
+        final LocalTime time = new Time(0).toLocalTime();
         Exhibition exhibition = Exhibition.builder()
                 .id(320L)
                 .theme("theme")
@@ -96,8 +96,8 @@ public class ExhibitionServiceTest {
     @Test
     public void deleteById() {
         Throwable exception = Assert.assertThrows(NoSuchElementException.class, () -> {
-            final Date date = new Date(0);
-            final Time time = new Time(0);
+            final LocalDate date = new Date(0).toLocalDate();
+            final LocalTime time = new Time(0).toLocalTime();
             Exhibition exhibition = Exhibition.builder()
                     .id(320L)
                     .theme("theme")
@@ -127,8 +127,8 @@ public class ExhibitionServiceTest {
 
     @Test
     public void findExhibition() {
-        final Date date = new Date(0);
-        final Time time = new Time(0);
+        final LocalDate date = new Date(0).toLocalDate();
+        final LocalTime time = new Time(0).toLocalTime();
         Exhibition exhibition = Exhibition.builder()
                 .id(320L)
                 .theme("theme")
@@ -151,8 +151,8 @@ public class ExhibitionServiceTest {
 
     @Test
     public void update() {
-        final Date date = new Date(0);
-        final Time time = new Time(0);
+        final LocalDate date = new Date(0).toLocalDate();
+        final LocalTime time = new Time(0).toLocalTime();
         Exhibition exhibition = Exhibition.builder()
                 .id(320L)
                 .theme("theme")
@@ -169,7 +169,7 @@ public class ExhibitionServiceTest {
         Optional<Exhibition> exhibition1 = exhibitionService.findByTheme("theme");
 
         exhibition = Exhibition.builder()
-                .id(exhibition1.get().getId())
+                .id(320L)
                 .theme("theme1")
                 .description("decr1")
                 .startDate(date)
@@ -185,7 +185,37 @@ public class ExhibitionServiceTest {
 
         Assert.assertNotEquals(exhibition1, exhibition2);
 
+        exhibition1.ifPresent(exhibitionService::delete);
         exhibition2.ifPresent(exhibitionService::delete);
+    }
+
+    @Test
+    public void getNumberOfExhibitions() {
+        int initialNumber = exhibitionService.getNumberOfExhibitions();
+
+        final LocalDate date = new Date(0).toLocalDate();
+        final LocalTime time = new Time(0).toLocalTime();
+        Exhibition exhibition = Exhibition.builder()
+                .id(320L)
+                .theme("theme")
+                .description("decr")
+                .startDate(date)
+                .endDate(date)
+                .startTime(time)
+                .endTime(time)
+                .price(20.00)
+                .build();
+
+        exhibitionService.addExhibition(exhibition);
+
+        int finalNumber = exhibitionService.getNumberOfExhibitions();
+
+        Assert.assertEquals(initialNumber + 1, finalNumber);
+
+        Optional<Exhibition> exhibition1 = exhibitionService.findByTheme("theme");
+
+        exhibition1.ifPresent(exhibitionService::delete);
+
     }
 
 }

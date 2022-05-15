@@ -8,11 +8,12 @@ import com.my.model.services.ExhibitionService;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
 import java.sql.Date;
+import java.time.LocalDate;
 import java.util.List;
 
 public class GetExhibitions implements Command {
 
-    private ExhibitionService exhibitionService;
+    private final ExhibitionService exhibitionService;
 
     public GetExhibitions(ExhibitionService exhibitionService) {
         this.exhibitionService = exhibitionService;
@@ -25,10 +26,10 @@ public class GetExhibitions implements Command {
 
         int currentPage = Integer.parseInt(request.getParameter("pageNum"));
         String sortType = request.getParameter("sortType");
-        Date chosenDate = null;
+        LocalDate chosenDate = null;
         if (request.getParameter("chosenDate") != null
                 && !request.getParameter("chosenDate").equals("")) {
-            chosenDate = Date.valueOf(request.getParameter("chosenDate"));
+            chosenDate = Date.valueOf(request.getParameter("chosenDate")).toLocalDate();
         }
 
         if(sortType.equals("date") && chosenDate == null) {
@@ -36,12 +37,12 @@ public class GetExhibitions implements Command {
             return "index.jsp";
         }
 
-        Date currentDate = new Date(System.currentTimeMillis());
+        LocalDate currentDate = new Date(System.currentTimeMillis()).toLocalDate();
 
         List<Exhibition> allExhibitions = exhibitionService.findAllExhibitions();
 
         for(Exhibition exhibition : allExhibitions) {
-            if (exhibition.getEndDate().before(currentDate)) {
+            if (exhibition.getEndDate().isBefore(currentDate)) {
                 exhibitionService.delete(exhibition);
             }
         }

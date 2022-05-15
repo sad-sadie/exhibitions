@@ -12,10 +12,10 @@ public class ExhibitionMapper implements Mapper<Exhibition> {
                 .id(rs.getLong("id"))
                 .theme(rs.getString("theme"))
                 .description(rs.getString("description"))
-                .startDate(rs.getDate("start_date"))
-                .endDate(rs.getDate("end_date"))
-                .startTime(rs.getTime("start_time"))
-                .endTime(rs.getTime("end_time"))
+                .startDate(rs.getDate("start_date").toLocalDate())
+                .endDate(rs.getDate("end_date").toLocalDate())
+                .startTime(rs.getTime("start_time").toLocalTime())
+                .endTime(rs.getTime("end_time").toLocalTime())
                 .price(rs.getDouble("price"))
                 .build();
     }

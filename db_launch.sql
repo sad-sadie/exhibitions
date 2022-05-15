@@ -76,7 +76,15 @@ INSERT INTO role VALUES(0, 'ADMIN');
 INSERT INTO role VALUES(1, 'USER');
 INSERT INTO role VALUES(2, 'GUEST');
 
-INSERT INTO user VALUES(0, 'admin@gmail.com', 'admin', '202cb962ac59075b964b07152d234b70', 0);
+INSERT INTO user VALUES(1, 'admin@gmail.com', 'admin', '202cb962ac59075b964b07152d234b70', 0);
+INSERT INTO user VALUES(2, 'ivanko@gmail.com', 'Ivan', '202cb962ac59075b964b07152d234b70', 1);
+INSERT INTO user VALUES(3, 'vovast@gmail.com', 'VovaST', '202cb962ac59075b964b07152d234b70', 1);
+INSERT INTO user VALUES(4, 'vladsurkov@gmail.com', 'VladSurkov', '202cb962ac59075b964b07152d234b70', 1);
+INSERT INTO user VALUES(5, 'blessin@gmail.com', 'blessin', '202cb962ac59075b964b07152d234b70', 1);
+
+INSERT INTO hall VALUES(1, 'OldHall', 'This is the oldest hall out of all the halls. It was opened in 2001. It has hosted about 800 exhibitions throughout its existence.');
+INSERT INTO hall VALUES(2, 'RedHall', 'This is the biggest hall of ours. It can host more than 5 exhibitions at the same time. It is know worldwide known for its size.');
+INSERT INTO hall VALUES(3, 'LivingHall', 'This is the newest hall. It was built in 2012. It is most known for its exhibitions connected to animal world.');
 
 
 SET SQL_MODE=@OLD_SQL_MODE;

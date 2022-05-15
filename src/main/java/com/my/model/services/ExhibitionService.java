@@ -5,8 +5,8 @@ import com.my.model.dao.ExhibitionDao;
 import com.my.model.entities.Exhibition;
 import com.my.model.entities.Hall;
 
-import java.sql.Date;
-import java.sql.Time;
+import java.time.LocalDate;
+import java.time.LocalTime;
 import java.util.List;
 import java.util.Map;
 import java.util.Optional;
@@ -21,7 +21,7 @@ public class ExhibitionService {
     }
 
     public void addExhibition
-            (String theme, String description, Date startDate, Date endDate, Time startTime, Time endTime, double price) {
+            (String theme, String description, LocalDate startDate, LocalDate endDate, LocalTime startTime, LocalTime endTime, double price) {
         Exhibition exhibition = Exhibition.builder()
                 .theme(theme)
                 .description(description)
@@ -65,11 +65,11 @@ public class ExhibitionService {
         }
     }
 
-    public List<Exhibition> getExhibitionsOnPageByDate(int pageNum, Date date) {
+    public List<Exhibition> getExhibitionsOnPageByDate(int pageNum, LocalDate date) {
         return exhibitionDao.getExhibitionsOnPageByDate(pageNum, date);
     }
 
-    public int getNumberOfExhibitionsByDate(Date date) {
+    public int getNumberOfExhibitionsByDate(LocalDate date) {
         return exhibitionDao.getNumberOfExhibitionsByDate(date);
     }
 

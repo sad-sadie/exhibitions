@@ -3,18 +3,18 @@ package com.my.model.entities;
 import com.my.model.services.ExhibitionService;
 
 import java.io.Serializable;
-import java.sql.Date;
-import java.sql.Time;
+import java.time.LocalDate;
+import java.time.LocalTime;
 import java.util.List;
 
 public class Exhibition implements Serializable {
     private long id;
     private String theme;
     private String description;
-    private Date startDate;
-    private Date endDate;
-    private Time startTime;
-    private Time endTime;
+    private LocalDate startDate;
+    private LocalDate endDate;
+    private LocalTime startTime;
+    private LocalTime endTime;
     private double price;
 
     public long getId() {
@@ -41,35 +41,35 @@ public class Exhibition implements Serializable {
         this.description = description;
     }
 
-    public Date getStartDate() {
+    public LocalDate getStartDate() {
         return startDate;
     }
 
-    public void setStartDate(Date startDate) {
+    public void setStartDate(LocalDate startDate) {
         this.startDate = startDate;
     }
 
-    public Date getEndDate() {
+    public LocalDate getEndDate() {
         return endDate;
     }
 
-    public void setEndDate(Date endDate) {
+    public void setEndDate(LocalDate endDate) {
         this.endDate = endDate;
     }
 
-    public Time getStartTime() {
+    public LocalTime getStartTime() {
         return startTime;
     }
 
-    public void setStartTime(Time startTime) {
+    public void setStartTime(LocalTime startTime) {
         this.startTime = startTime;
     }
 
-    public Time getEndTime() {
+    public LocalTime getEndTime() {
         return endTime;
     }
 
-    public void setEndTime(Time endTime) {
+    public void setEndTime(LocalTime endTime) {
         this.endTime = endTime;
     }
 
@@ -108,22 +108,22 @@ public class Exhibition implements Serializable {
             return this;
         }
 
-        public Exhibition.Builder startDate(Date startDate) {
+        public Exhibition.Builder startDate(LocalDate startDate) {
             Exhibition.this.startDate = startDate;
             return this;
         }
 
-        public Exhibition.Builder endDate(Date startDate) {
+        public Exhibition.Builder endDate(LocalDate startDate) {
             Exhibition.this.endDate = startDate;
             return this;
         }
 
-        public Exhibition.Builder startTime(Time startTime) {
+        public Exhibition.Builder startTime(LocalTime startTime) {
             Exhibition.this.startTime = startTime;
             return this;
         }
 
-        public Exhibition.Builder endTime(Time endTime) {
+        public Exhibition.Builder endTime(LocalTime endTime) {
             Exhibition.this.endTime = endTime;
             return this;
         }

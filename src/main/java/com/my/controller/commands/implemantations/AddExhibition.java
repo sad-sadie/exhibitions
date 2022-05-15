@@ -6,10 +6,12 @@ import com.my.model.services.ExhibitionService;
 import javax.servlet.http.HttpServletRequest;
 import java.sql.Date;
 import java.sql.Time;
+import java.time.LocalDate;
+import java.time.LocalTime;
 
 public class AddExhibition implements Command {
 
-    private ExhibitionService exhibitionService;
+    private final ExhibitionService exhibitionService;
 
     public AddExhibition(ExhibitionService exhibitionService) {
         this.exhibitionService = exhibitionService;
@@ -19,22 +21,22 @@ public class AddExhibition implements Command {
     public String execute(HttpServletRequest request)  {
         String theme = request.getParameter("theme");
         String description = request.getParameter("description");
-        Date startDate = null;
-        Date endDate = null;
-        Time startTime = null;
-        Time endTime = null;
+        LocalDate startDate = null;
+        LocalDate endDate = null;
+        LocalTime startTime = null;
+        LocalTime endTime = null;
         double price = -1;
         if(!request.getParameter("startDate").equals("")) {
-            startDate = Date.valueOf(request.getParameter("startDate"));
+            startDate = Date.valueOf(request.getParameter("startDate")).toLocalDate();
         }
         if(!request.getParameter("endDate").equals("")) {
-            endDate = Date.valueOf(request.getParameter("endDate"));
+            endDate = Date.valueOf(request.getParameter("endDate")).toLocalDate();
         }
         if(!request.getParameter("startTime").equals("")) {
-            startTime = Time.valueOf(request.getParameter("startTime") + ":00");
+            startTime = Time.valueOf(request.getParameter("startTime") + ":00").toLocalTime();
         }
         if(!request.getParameter("endTime").equals("")) {
-            endTime = Time.valueOf(request.getParameter("endTime") + ":00");
+            endTime = Time.valueOf(request.getParameter("endTime") + ":00").toLocalTime();
         }
         String priceString = request.getParameter("price");
         if(!priceString.equals("")) {
@@ -62,7 +64,7 @@ public class AddExhibition implements Command {
             request.getSession().setAttribute("error", "exhibitionEndDate");
             return "view/addExhibition.jsp";
         }
-        if(startDate.after(endDate) || startDate.before(new Date(System.currentTimeMillis()))) {
+        if(startDate.isAfter(endDate) || startDate.isBefore(new Date(System.currentTimeMillis()).toLocalDate())) {
             request.getSession().setAttribute("error", "exhibitionDates");
             return "view/addExhibition.jsp";
         }
@@ -74,7 +76,7 @@ public class AddExhibition implements Command {
             request.getSession().setAttribute("error", "exhibitionEndTime");
             return "view/addExhibition.jsp";
         }
-        if(startTime.after(endTime)) {
+        if(startTime.isAfter(endTime)) {
             request.getSession().setAttribute("error", "exhibitionTimes");
             return "view/addExhibition.jsp";
         }

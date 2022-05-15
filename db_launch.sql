@@ -1,0 +1,84 @@
+SET @OLD_UNIQUE_CHECKS=@@UNIQUE_CHECKS, UNIQUE_CHECKS=0;
+SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0;
+SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='ONLY_FULL_GROUP_BY,STRICT_TRANS_TABLES,NO_ZERO_IN_DATE,NO_ZERO_DATE,ERROR_FOR_DIVISION_BY_ZERO,NO_ENGINE_SUBSTITUTION';
+
+
+DROP SCHEMA IF EXISTS `exhibitions_db`;
+CREATE SCHEMA `exhibitions_db`;
+USE `exhibitions_db` ;
+
+
+CREATE TABLE IF NOT EXISTS `exhibition`(
+    `id` BIGINT NOT NULL AUTO_INCREMENT,
+    `theme` NVARCHAR(255) NOT NULL,
+    `description` NVARCHAR(255) NOT NULL,
+    `start_date` DATE NOT NULL,
+    `end_date` DATE NOT NULL,
+    `start_time` TIME NOT NULL,
+    `end_time` TIME NOT NULL,
+    `price` DECIMAL(19,2) NOT NULL,
+    PRIMARY KEY (`id`)
+    )
+    ENGINE = InnoDB;
+
+
+
+CREATE TABLE IF NOT EXISTS `hall` (
+    `id` BIGINT NOT NULL AUTO_INCREMENT,
+    `name` NVARCHAR(255) NOT NULL,
+    `description` NVARCHAR(1024) NOT NULL,
+    PRIMARY KEY (`id`))
+    ENGINE = InnoDB;
+
+
+CREATE TABLE IF NOT EXISTS `exhibitions_halls` (
+   `exhibition_id` BIGINT NOT NULL,
+   `hall_id` BIGINT NOT NULL,
+    FOREIGN KEY (`hall_id`)
+    REFERENCES `hall` (`id`)
+    ON DELETE CASCADE,
+    FOREIGN KEY (`exhibition_id`)
+    REFERENCES `exhibition` (`id`)
+    ON DELETE CASCADE)
+    ENGINE = InnoDB;
+
+CREATE TABLE IF NOT EXISTS `role` (
+    `id` INT NOT NULL,
+    `name` NVARCHAR(255) NOT NULL,
+    PRIMARY KEY (`id`))
+    ENGINE = InnoDB;
+
+
+CREATE TABLE IF NOT EXISTS `user` (
+    `id` BIGINT NOT NULL AUTO_INCREMENT,
+    `email` NVARCHAR(255) NOT NULL,
+    `login` NVARCHAR(255) NOT NULL,
+    `password` VARCHAR(255) NOT NULL,
+    `role_id` INT NULL DEFAULT NULL,
+    PRIMARY KEY (`id`),
+    FOREIGN KEY (`role_id`)
+    REFERENCES `role` (`id`))
+    ENGINE = InnoDB;
+
+
+CREATE TABLE IF NOT EXISTS `orders` (
+    `exhibition_id` BIGINT NOT NULL,
+    `user_id` BIGINT NOT NULL,
+    FOREIGN KEY (`user_id`)
+    REFERENCES `user` (`id`)
+    ON DELETE CASCADE,
+    FOREIGN KEY (`exhibition_id`)
+    REFERENCES `exhibition` (`id`)
+    ON DELETE CASCADE)
+    ENGINE = InnoDB;
+
+INSERT INTO role VALUES(0, 'ADMIN');
+INSERT INTO role VALUES(1, 'USER');
+INSERT INTO role VALUES(2, 'GUEST');
+
+INSERT INTO user VALUES(0, 'admin@gmail.com', 'admin', '202cb962ac59075b964b07152d234b70', 0);
+
+
+SET SQL_MODE=@OLD_SQL_MODE;
+SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS;
+SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS;

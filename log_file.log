@@ -1,0 +1,266 @@
+2022-05-04 20:16:36 INFO  Servlet:24 - Servlet.init
+2022-05-04 20:16:37 INFO  Servlet:47 - Servlet.doGet; commandName ==> null
+2022-05-04 20:16:39 INFO  Servlet:47 - Servlet.doGet; commandName ==> null
+2022-05-04 20:16:59 INFO  Servlet:47 - Servlet.doGet; commandName ==> getExhibitions
+2022-05-04 20:17:02 INFO  Servlet:47 - Servlet.doGet; commandName ==> getHomePage
+2022-05-04 20:17:05 INFO  Servlet:47 - Servlet.doGet; commandName ==> getHomePage
+2022-05-04 20:17:08 INFO  Servlet:47 - Servlet.doGet; commandName ==> logIn
+2022-05-04 20:17:08 INFO  Servlet:47 - Servlet.doGet; commandName ==> null
+2022-05-04 20:17:09 INFO  Servlet:47 - Servlet.doGet; commandName ==> getExhibitions
+2022-05-04 20:17:11 INFO  Servlet:47 - Servlet.doGet; commandName ==> getExhibitions
+2022-05-04 20:17:13 INFO  Servlet:47 - Servlet.doGet; commandName ==> getExhibitions
+2022-05-04 20:17:16 INFO  Servlet:47 - Servlet.doGet; commandName ==> getStatistics
+2022-05-04 20:17:21 INFO  Servlet:47 - Servlet.doGet; commandName ==> getHomePage
+2022-05-04 20:17:22 INFO  Servlet:47 - Servlet.doGet; commandName ==> chooseLanguage
+2022-05-04 20:17:23 INFO  Servlet:47 - Servlet.doGet; commandName ==> getStatistics
+2022-05-04 20:17:26 INFO  Servlet:47 - Servlet.doGet; commandName ==> logOut
+2022-05-04 20:21:05 INFO  Servlet:64 - Servlet.destroy
+2022-05-05 02:39:52 ERROR ExhibitionDaoImpl:170 - Cannot set halls fot exhibitionjava.sql.SQLIntegrityConstraintViolationException: Cannot add or update a child row: a foreign key constraint fails (`exhibitions_db`.`exhibitions_halls`, CONSTRAINT `exhibitions_halls_ibfk_1` FOREIGN KEY (`hall_id`) REFERENCES `hall` (`id`) ON DELETE CASCADE)
+2022-05-05 02:40:37 ERROR ExhibitionDaoImpl:170 - Cannot set halls fot exhibitionjava.sql.SQLIntegrityConstraintViolationException: Cannot add or update a child row: a foreign key constraint fails (`exhibitions_db`.`exhibitions_halls`, CONSTRAINT `exhibitions_halls_ibfk_1` FOREIGN KEY (`hall_id`) REFERENCES `hall` (`id`) ON DELETE CASCADE)
+2022-05-05 02:41:21 ERROR ExhibitionDaoImpl:170 - Cannot set halls fot exhibitionjava.sql.SQLIntegrityConstraintViolationException: Cannot add or update a child row: a foreign key constraint fails (`exhibitions_db`.`exhibitions_halls`, CONSTRAINT `exhibitions_halls_ibfk_1` FOREIGN KEY (`hall_id`) REFERENCES `hall` (`id`) ON DELETE CASCADE)
+2022-05-05 02:42:06 ERROR ExhibitionDaoImpl:170 - Cannot set halls fot exhibitionjava.sql.SQLIntegrityConstraintViolationException: Cannot add or update a child row: a foreign key constraint fails (`exhibitions_db`.`exhibitions_halls`, CONSTRAINT `exhibitions_halls_ibfk_1` FOREIGN KEY (`hall_id`) REFERENCES `hall` (`id`) ON DELETE CASCADE)
+2022-05-05 02:43:42 ERROR ExhibitionDaoImpl:170 - Cannot set halls fot exhibitionjava.sql.SQLIntegrityConstraintViolationException: Cannot add or update a child row: a foreign key constraint fails (`exhibitions_db`.`exhibitions_halls`, CONSTRAINT `exhibitions_halls_ibfk_1` FOREIGN KEY (`hall_id`) REFERENCES `hall` (`id`) ON DELETE CASCADE)
+2022-05-05 02:47:15 INFO  Servlet:24 - Servlet.init
+2022-05-05 02:47:16 INFO  Servlet:47 - Servlet.doGet; commandName ==> null
+2022-05-05 02:47:18 INFO  Servlet:47 - Servlet.doGet; commandName ==> null
+2022-05-05 02:47:34 INFO  Servlet:47 - Servlet.doGet; commandName ==> logIn
+2022-05-05 02:47:34 INFO  Servlet:47 - Servlet.doGet; commandName ==> null
+2022-05-05 02:47:41 INFO  Servlet:47 - Servlet.doGet; commandName ==> addHall
+2022-05-05 02:48:07 INFO  Servlet:47 - Servlet.doGet; commandName ==> addExhibition
+2022-05-05 02:49:31 INFO  Servlet:47 - Servlet.doGet; commandName ==> addExhibition
+2022-05-05 02:51:34 INFO  Servlet:47 - Servlet.doGet; commandName ==> addExhibition
+2022-05-05 02:52:08 INFO  Servlet:47 - Servlet.doGet; commandName ==> addExhibition
+2022-05-05 02:52:21 INFO  Servlet:64 - Servlet.destroy
+2022-05-05 02:52:37 INFO  Servlet:24 - Servlet.init
+2022-05-05 02:52:38 INFO  Servlet:47 - Servlet.doGet; commandName ==> null
+2022-05-05 02:52:39 INFO  Servlet:47 - Servlet.doGet; commandName ==> null
+2022-05-05 02:52:48 INFO  Servlet:47 - Servlet.doGet; commandName ==> logIn
+2022-05-05 02:52:48 INFO  Servlet:47 - Servlet.doGet; commandName ==> null
+2022-05-05 02:53:18 INFO  Servlet:47 - Servlet.doGet; commandName ==> addHall
+2022-05-05 02:53:48 INFO  Servlet:47 - Servlet.doGet; commandName ==> addExhibition
+2022-05-05 02:54:04 INFO  Servlet:47 - Servlet.doGet; commandName ==> getHomePage
+2022-05-05 02:54:04 INFO  Servlet:47 - Servlet.doGet; commandName ==> getExhibitions
+2022-05-05 02:54:15 INFO  Servlet:47 - Servlet.doGet; commandName ==> buyTicket
+2022-05-05 03:13:12 INFO  Servlet:64 - Servlet.destroy
+2022-05-05 03:31:32 INFO  Servlet:24 - Servlet.init
+2022-05-05 03:31:33 INFO  Servlet:47 - Servlet.doGet; commandName ==> null
+2022-05-05 03:31:35 INFO  Servlet:47 - Servlet.doGet; commandName ==> null
+2022-05-05 03:31:38 INFO  Servlet:47 - Servlet.doGet; commandName ==> logIn
+2022-05-05 03:31:42 INFO  Servlet:47 - Servlet.doGet; commandName ==> logIn
+2022-05-05 03:32:47 INFO  Servlet:64 - Servlet.destroy
+2022-05-05 03:33:03 INFO  Servlet:24 - Servlet.init
+2022-05-05 03:33:04 INFO  Servlet:47 - Servlet.doGet; commandName ==> null
+2022-05-05 03:33:05 INFO  Servlet:47 - Servlet.doGet; commandName ==> null
+2022-05-05 03:33:08 INFO  Servlet:47 - Servlet.doGet; commandName ==> logIn
+2022-05-05 03:33:08 INFO  Servlet:47 - Servlet.doGet; commandName ==> null
+2022-05-05 03:33:32 INFO  Servlet:47 - Servlet.doGet; commandName ==> register
+2022-05-05 03:33:32 INFO  Servlet:47 - Servlet.doGet; commandName ==> null
+2022-05-05 03:33:35 INFO  Servlet:47 - Servlet.doGet; commandName ==> logOut
+2022-05-05 03:33:44 INFO  Servlet:47 - Servlet.doGet; commandName ==> logIn
+2022-05-05 03:33:44 INFO  Servlet:47 - Servlet.doGet; commandName ==> null
+2022-05-05 03:34:12 INFO  Servlet:64 - Servlet.destroy
+2022-05-05 17:58:56 INFO  Servlet:24 - Servlet.init
+2022-05-05 17:58:57 INFO  Servlet:47 - Servlet.doGet; commandName ==> null
+2022-05-05 17:58:59 INFO  Servlet:47 - Servlet.doGet; commandName ==> null
+2022-05-05 17:59:03 INFO  Servlet:47 - Servlet.doGet; commandName ==> logIn
+2022-05-05 17:59:07 INFO  Servlet:47 - Servlet.doGet; commandName ==> logIn
+2022-05-05 17:59:07 INFO  Servlet:47 - Servlet.doGet; commandName ==> null
+2022-05-05 17:59:41 INFO  Servlet:47 - Servlet.doGet; commandName ==> addHall
+2022-05-05 17:59:45 INFO  Servlet:47 - Servlet.doGet; commandName ==> addHall
+2022-05-05 17:59:50 INFO  Servlet:47 - Servlet.doGet; commandName ==> addHall
+2022-05-05 18:00:23 INFO  Servlet:47 - Servlet.doGet; commandName ==> addExhibition
+2022-05-05 18:01:03 INFO  Servlet:47 - Servlet.doGet; commandName ==> addExhibition
+2022-05-05 18:01:42 INFO  Servlet:47 - Servlet.doGet; commandName ==> addExhibition
+2022-05-05 18:02:10 INFO  Servlet:47 - Servlet.doGet; commandName ==> addExhibition
+2022-05-05 18:02:22 INFO  Servlet:47 - Servlet.doGet; commandName ==> register
+2022-05-05 18:02:22 INFO  Servlet:47 - Servlet.doGet; commandName ==> null
+2022-05-05 18:02:25 INFO  Servlet:47 - Servlet.doGet; commandName ==> getExhibitions
+2022-05-05 18:02:27 INFO  Servlet:47 - Servlet.doGet; commandName ==> buyTicket
+2022-05-05 18:02:28 INFO  Servlet:47 - Servlet.doGet; commandName ==> getExhibitions
+2022-05-05 18:02:29 INFO  Servlet:47 - Servlet.doGet; commandName ==> buyTicket
+2022-05-05 18:03:01 INFO  Servlet:47 - Servlet.doGet; commandName ==> logOut
+2022-05-05 18:03:11 INFO  Servlet:47 - Servlet.doGet; commandName ==> register
+2022-05-05 18:03:11 INFO  Servlet:47 - Servlet.doGet; commandName ==> null
+2022-05-05 18:03:13 INFO  Servlet:47 - Servlet.doGet; commandName ==> getExhibitions
+2022-05-05 18:03:14 INFO  Servlet:47 - Servlet.doGet; commandName ==> buyTicket
+2022-05-05 18:03:15 INFO  Servlet:47 - Servlet.doGet; commandName ==> getExhibitions
+2022-05-05 18:03:15 INFO  Servlet:47 - Servlet.doGet; commandName ==> buyTicket
+2022-05-05 18:03:16 INFO  Servlet:47 - Servlet.doGet; commandName ==> getExhibitions
+2022-05-05 18:03:17 INFO  Servlet:47 - Servlet.doGet; commandName ==> buyTicket
+2022-05-05 18:03:38 INFO  Servlet:47 - Servlet.doGet; commandName ==> register
+2022-05-05 18:03:38 INFO  Servlet:47 - Servlet.doGet; commandName ==> null
+2022-05-05 18:03:39 INFO  Servlet:47 - Servlet.doGet; commandName ==> getExhibitions
+2022-05-05 18:03:41 INFO  Servlet:47 - Servlet.doGet; commandName ==> buyTicket
+2022-05-05 18:03:42 INFO  Servlet:47 - Servlet.doGet; commandName ==> getExhibitions
+2022-05-05 18:03:44 INFO  Servlet:47 - Servlet.doGet; commandName ==> buyTicket
+2022-05-05 18:03:45 INFO  Servlet:47 - Servlet.doGet; commandName ==> getExhibitions
+2022-05-05 18:03:49 INFO  Servlet:47 - Servlet.doGet; commandName ==> getExhibitions
+2022-05-05 18:03:50 INFO  Servlet:47 - Servlet.doGet; commandName ==> buyTicket
+2022-05-05 18:04:07 INFO  Servlet:47 - Servlet.doGet; commandName ==> register
+2022-05-05 18:04:07 INFO  Servlet:47 - Servlet.doGet; commandName ==> null
+2022-05-05 18:04:08 INFO  Servlet:47 - Servlet.doGet; commandName ==> getExhibitions
+2022-05-05 18:04:10 INFO  Servlet:47 - Servlet.doGet; commandName ==> buyTicket
+2022-05-05 18:04:10 INFO  Servlet:47 - Servlet.doGet; commandName ==> getExhibitions
+2022-05-05 18:04:11 INFO  Servlet:47 - Servlet.doGet; commandName ==> buyTicket
+2022-05-05 18:04:12 INFO  Servlet:47 - Servlet.doGet; commandName ==> getExhibitions
+2022-05-05 18:04:13 INFO  Servlet:47 - Servlet.doGet; commandName ==> buyTicket
+2022-05-05 18:04:13 INFO  Servlet:47 - Servlet.doGet; commandName ==> getExhibitions
+2022-05-05 18:04:14 INFO  Servlet:47 - Servlet.doGet; commandName ==> buyTicket
+2022-05-05 18:04:15 INFO  Servlet:47 - Servlet.doGet; commandName ==> getExhibitions
+2022-05-05 18:04:15 INFO  Servlet:47 - Servlet.doGet; commandName ==> buyTicket
+2022-05-05 18:04:17 INFO  Servlet:47 - Servlet.doGet; commandName ==> logOut
+2022-05-05 18:04:18 INFO  Servlet:47 - Servlet.doGet; commandName ==> logIn
+2022-05-05 18:04:18 INFO  Servlet:47 - Servlet.doGet; commandName ==> null
+2022-05-05 18:04:43 INFO  Servlet:47 - Servlet.doGet; commandName ==> getStatistics
+2022-05-05 18:04:46 INFO  Servlet:47 - Servlet.doGet; commandName ==> getDetailedStats
+2022-05-05 18:04:52 INFO  Servlet:47 - Servlet.doGet; commandName ==> getDetailedStats
+2022-05-05 18:04:55 INFO  Servlet:47 - Servlet.doGet; commandName ==> getDetailedStats
+2022-05-05 18:04:57 INFO  Servlet:47 - Servlet.doGet; commandName ==> getDetailedStats
+2022-05-05 18:05:00 INFO  Servlet:47 - Servlet.doGet; commandName ==> getExhibitions
+2022-05-05 18:05:01 INFO  Servlet:47 - Servlet.doGet; commandName ==> buyTicket
+2022-05-05 18:05:01 INFO  Servlet:47 - Servlet.doGet; commandName ==> getExhibitions
+2022-05-05 18:05:02 INFO  Servlet:47 - Servlet.doGet; commandName ==> buyTicket
+2022-05-05 18:05:03 INFO  Servlet:47 - Servlet.doGet; commandName ==> getStatistics
+2022-05-05 18:05:05 INFO  Servlet:47 - Servlet.doGet; commandName ==> getDetailedStats
+2022-05-05 18:05:24 INFO  Servlet:47 - Servlet.doGet; commandName ==> chooseLanguage
+2022-05-05 18:05:26 INFO  Servlet:47 - Servlet.doGet; commandName ==> getStatistics
+2022-05-05 18:05:27 INFO  Servlet:47 - Servlet.doGet; commandName ==> getDetailedStats
+2022-05-05 18:05:31 INFO  Servlet:47 - Servlet.doGet; commandName ==> getHomePage
+2022-05-05 18:05:35 INFO  Servlet:47 - Servlet.doGet; commandName ==> getHomePage
+2022-05-05 18:05:37 INFO  Servlet:47 - Servlet.doGet; commandName ==> getHalls
+2022-05-05 18:06:59 INFO  Servlet:47 - Servlet.doGet; commandName ==> logOut
+2022-05-05 18:07:03 INFO  Servlet:47 - Servlet.doGet; commandName ==> logIn
+2022-05-05 18:07:03 INFO  Servlet:47 - Servlet.doGet; commandName ==> null
+2022-05-05 18:07:04 INFO  Servlet:47 - Servlet.doGet; commandName ==> logOut
+2022-05-05 18:26:46 INFO  Servlet:47 - Servlet.doGet; commandName ==> getExhibitions
+2022-05-05 18:29:14 INFO  Servlet:47 - Servlet.doGet; commandName ==> getExhibitions
+2022-05-05 18:31:01 INFO  Servlet:47 - Servlet.doGet; commandName ==> getHomePage
+2022-05-05 18:31:06 INFO  Servlet:47 - Servlet.doGet; commandName ==> getExhibitions
+2022-05-05 18:31:09 INFO  Servlet:47 - Servlet.doGet; commandName ==> getHomePage
+2022-05-05 18:31:13 INFO  Servlet:47 - Servlet.doGet; commandName ==> getExhibitions
+2022-05-05 18:31:20 INFO  Servlet:47 - Servlet.doGet; commandName ==> getHomePage
+2022-05-05 18:31:22 INFO  Servlet:47 - Servlet.doGet; commandName ==> getExhibitions
+2022-05-05 18:31:56 INFO  Servlet:47 - Servlet.doGet; commandName ==> getHomePage
+2022-05-05 18:32:12 INFO  Servlet:47 - Servlet.doGet; commandName ==> getExhibitions
+2022-05-05 18:32:20 INFO  Servlet:47 - Servlet.doGet; commandName ==> getHomePage
+2022-05-05 18:32:22 INFO  Servlet:47 - Servlet.doGet; commandName ==> getExhibitions
+2022-05-05 18:32:23 INFO  Servlet:47 - Servlet.doGet; commandName ==> getHomePage
+2022-05-05 18:32:26 INFO  Servlet:47 - Servlet.doGet; commandName ==> getHalls
+2022-05-05 18:32:32 INFO  Servlet:47 - Servlet.doGet; commandName ==> getHomePage
+2022-05-05 18:32:37 INFO  Servlet:47 - Servlet.doGet; commandName ==> getExhibitions
+2022-05-05 18:32:44 INFO  Servlet:47 - Servlet.doGet; commandName ==> logIn
+2022-05-05 18:32:44 INFO  Servlet:47 - Servlet.doGet; commandName ==> null
+2022-05-05 18:32:56 INFO  Servlet:47 - Servlet.doGet; commandName ==> getExhibitions
+2022-05-05 18:33:05 INFO  Servlet:47 - Servlet.doGet; commandName ==> buyTicket
+2022-05-05 18:33:16 INFO  Servlet:47 - Servlet.doGet; commandName ==> getExhibitions
+2022-05-05 18:33:17 INFO  Servlet:47 - Servlet.doGet; commandName ==> buyTicket
+2022-05-05 18:33:20 INFO  Servlet:47 - Servlet.doGet; commandName ==> logOut
+2022-05-05 18:33:24 INFO  Servlet:47 - Servlet.doGet; commandName ==> logIn
+2022-05-05 18:33:24 INFO  Servlet:47 - Servlet.doGet; commandName ==> null
+2022-05-05 18:33:36 INFO  Servlet:47 - Servlet.doGet; commandName ==> getStatistics
+2022-05-05 18:33:49 INFO  Servlet:47 - Servlet.doGet; commandName ==> getDetailedStats
+2022-05-05 18:34:04 INFO  Servlet:47 - Servlet.doGet; commandName ==> getDetailedStats
+2022-05-05 18:34:11 INFO  Servlet:47 - Servlet.doGet; commandName ==> getHomePage
+2022-05-05 18:34:12 INFO  Servlet:47 - Servlet.doGet; commandName ==> getExhibitions
+2022-05-05 18:34:19 INFO  Servlet:47 - Servlet.doGet; commandName ==> cancelExhibition
+2022-05-05 18:34:34 INFO  Servlet:47 - Servlet.doGet; commandName ==> getStatistics
+2022-05-05 18:34:37 INFO  Servlet:47 - Servlet.doGet; commandName ==> getHomePage
+2022-05-05 18:46:51 INFO  Servlet:47 - Servlet.doGet; commandName ==> getStatistics
+2022-05-05 18:46:53 INFO  Servlet:47 - Servlet.doGet; commandName ==> getDetailedStats
+2022-05-05 18:46:56 INFO  Servlet:47 - Servlet.doGet; commandName ==> getStatistics
+2022-05-05 18:47:05 INFO  Servlet:47 - Servlet.doGet; commandName ==> getDetailedStats
+2022-05-05 18:47:09 INFO  Servlet:47 - Servlet.doGet; commandName ==> getHomePage
+2022-05-05 18:47:15 INFO  Servlet:47 - Servlet.doGet; commandName ==> getExhibitions
+2022-05-05 18:47:22 INFO  Servlet:47 - Servlet.doGet; commandName ==> chooseLanguage
+2022-05-05 18:47:24 INFO  Servlet:47 - Servlet.doGet; commandName ==> getExhibitions
+2022-05-05 18:47:28 INFO  Servlet:47 - Servlet.doGet; commandName ==> getHomePage
+2022-05-05 18:47:30 INFO  Servlet:47 - Servlet.doGet; commandName ==> logOut
+2022-05-05 18:47:37 INFO  Servlet:47 - Servlet.doGet; commandName ==> logIn
+2022-05-05 21:57:47 INFO  Servlet:24 - Servlet.init
+2022-05-05 21:57:49 INFO  Servlet:47 - Servlet.doGet; commandName ==> null
+2022-05-05 21:57:51 INFO  Servlet:47 - Servlet.doGet; commandName ==> null
+2022-05-05 21:58:01 INFO  Servlet:47 - Servlet.doGet; commandName ==> logIn
+2022-05-05 21:58:01 INFO  Servlet:47 - Servlet.doGet; commandName ==> null
+2022-05-05 21:58:02 INFO  Servlet:47 - Servlet.doGet; commandName ==> getExhibitions
+2022-05-05 21:58:09 INFO  Servlet:47 - Servlet.doGet; commandName ==> buyTicket
+2022-05-05 22:02:50 INFO  Servlet:47 - Servlet.doGet; commandName ==> logOut
+2022-05-05 22:02:50 INFO  Servlet:47 - Servlet.doGet; commandName ==> logOut
+2022-05-05 22:02:50 INFO  Servlet:47 - Servlet.doGet; commandName ==> logOut
+2022-05-05 22:02:51 INFO  Servlet:64 - Servlet.destroy
+2022-05-13 21:32:34 INFO  Servlet:24 - Servlet.init
+2022-05-13 21:32:35 INFO  Servlet:47 - Servlet.doGet; commandName ==> null
+2022-05-13 21:32:37 INFO  Servlet:47 - Servlet.doGet; commandName ==> null
+2022-05-13 21:32:41 INFO  Servlet:47 - Servlet.doGet; commandName ==> logIn
+2022-05-13 21:32:46 INFO  Servlet:47 - Servlet.doGet; commandName ==> logIn
+2022-05-13 21:34:06 INFO  Servlet:47 - Servlet.doGet; commandName ==> logIn
+2022-05-13 21:34:11 INFO  Servlet:47 - Servlet.doGet; commandName ==> logIn
+2022-05-13 21:34:15 INFO  Servlet:47 - Servlet.doGet; commandName ==> logIn
+2022-05-13 21:35:47 INFO  Servlet:64 - Servlet.destroy
+2022-05-13 21:36:02 INFO  Servlet:24 - Servlet.init
+2022-05-13 21:36:03 INFO  Servlet:47 - Servlet.doGet; commandName ==> null
+2022-05-13 21:36:04 INFO  Servlet:47 - Servlet.doGet; commandName ==> null
+2022-05-13 21:36:07 INFO  Servlet:47 - Servlet.doGet; commandName ==> logIn
+2022-05-13 21:36:42 INFO  Servlet:64 - Servlet.destroy
+2022-05-13 21:36:58 INFO  Servlet:24 - Servlet.init
+2022-05-13 21:36:59 INFO  Servlet:47 - Servlet.doGet; commandName ==> null
+2022-05-13 21:37:01 INFO  Servlet:47 - Servlet.doGet; commandName ==> null
+2022-05-13 21:37:06 INFO  Servlet:64 - Servlet.destroy
+2022-05-13 21:37:22 INFO  Servlet:24 - Servlet.init
+2022-05-13 21:37:22 INFO  Servlet:47 - Servlet.doGet; commandName ==> null
+2022-05-13 21:37:24 INFO  Servlet:47 - Servlet.doGet; commandName ==> null
+2022-05-13 21:37:27 INFO  Servlet:47 - Servlet.doGet; commandName ==> logIn
+2022-05-13 21:37:38 INFO  Servlet:64 - Servlet.destroy
+2022-05-13 21:37:55 INFO  Servlet:24 - Servlet.init
+2022-05-13 21:37:55 INFO  Servlet:47 - Servlet.doGet; commandName ==> null
+2022-05-13 21:37:57 INFO  Servlet:47 - Servlet.doGet; commandName ==> null
+2022-05-13 21:38:01 INFO  Servlet:47 - Servlet.doGet; commandName ==> logIn
+2022-05-13 21:38:28 INFO  Servlet:64 - Servlet.destroy
+2022-05-13 21:38:44 INFO  Servlet:24 - Servlet.init
+2022-05-13 21:38:45 INFO  Servlet:47 - Servlet.doGet; commandName ==> null
+2022-05-13 21:38:47 INFO  Servlet:47 - Servlet.doGet; commandName ==> null
+2022-05-13 21:38:49 INFO  Servlet:47 - Servlet.doGet; commandName ==> logIn
+2022-05-13 21:38:49 INFO  Servlet:47 - Servlet.doGet; commandName ==> null
+2022-05-13 21:39:03 INFO  Servlet:47 - Servlet.doGet; commandName ==> getStatistics
+2022-05-13 21:39:08 INFO  Servlet:47 - Servlet.doGet; commandName ==> getHomePage
+2022-05-13 21:39:10 INFO  Servlet:47 - Servlet.doGet; commandName ==> getHomePage
+2022-05-13 21:39:11 INFO  Servlet:47 - Servlet.doGet; commandName ==> getStatistics
+2022-05-13 21:39:13 INFO  Servlet:47 - Servlet.doGet; commandName ==> getHomePage
+2022-05-13 21:39:15 INFO  Servlet:47 - Servlet.doGet; commandName ==> getHomePage
+2022-05-13 21:39:17 INFO  Servlet:47 - Servlet.doGet; commandName ==> getStatistics
+2022-05-13 21:39:18 INFO  Servlet:47 - Servlet.doGet; commandName ==> getHomePage
+2022-05-13 21:39:19 INFO  Servlet:47 - Servlet.doGet; commandName ==> getExhibitions
+2022-05-13 21:39:23 INFO  Servlet:47 - Servlet.doGet; commandName ==> getStatistics
+2022-05-13 21:39:24 INFO  Servlet:47 - Servlet.doGet; commandName ==> getDetailedStats
+2022-05-13 21:39:25 INFO  Servlet:47 - Servlet.doGet; commandName ==> getHomePage
+2022-05-13 21:40:33 INFO  Servlet:64 - Servlet.destroy
+2022-05-13 21:40:49 INFO  Servlet:24 - Servlet.init
+2022-05-13 21:40:50 INFO  Servlet:47 - Servlet.doGet; commandName ==> null
+2022-05-13 21:40:51 INFO  Servlet:47 - Servlet.doGet; commandName ==> null
+2022-05-13 21:40:56 INFO  Servlet:47 - Servlet.doGet; commandName ==> logIn
+2022-05-13 21:40:56 INFO  Servlet:47 - Servlet.doGet; commandName ==> null
+2022-05-13 21:41:01 INFO  Servlet:47 - Servlet.doGet; commandName ==> getStatistics
+2022-05-13 21:41:03 INFO  Servlet:47 - Servlet.doGet; commandName ==> getDetailedStats
+2022-05-13 21:42:24 INFO  Servlet:64 - Servlet.destroy
+2022-05-13 21:42:39 INFO  Servlet:24 - Servlet.init
+2022-05-13 21:42:40 INFO  Servlet:47 - Servlet.doGet; commandName ==> null
+2022-05-13 21:42:41 INFO  Servlet:47 - Servlet.doGet; commandName ==> null
+2022-05-13 21:42:43 INFO  Servlet:47 - Servlet.doGet; commandName ==> logIn
+2022-05-13 21:42:44 INFO  Servlet:47 - Servlet.doGet; commandName ==> null
+2022-05-13 21:42:45 INFO  Servlet:47 - Servlet.doGet; commandName ==> getStatistics
+2022-05-13 21:42:48 INFO  Servlet:47 - Servlet.doGet; commandName ==> chooseLanguage
+2022-05-13 21:42:49 INFO  Servlet:47 - Servlet.doGet; commandName ==> getStatistics
+2022-05-14 00:21:29 INFO  Servlet:64 - Servlet.destroy
+2022-05-15 02:53:26 INFO  Servlet:24 - Servlet.init
+2022-05-15 02:53:27 INFO  Servlet:47 - Servlet.doGet; commandName ==> null
+2022-05-15 02:53:28 INFO  Servlet:47 - Servlet.doGet; commandName ==> null
+2022-05-15 02:53:41 INFO  Servlet:47 - Servlet.doGet; commandName ==> logIn
+2022-05-15 02:53:41 INFO  Servlet:47 - Servlet.doGet; commandName ==> null
+2022-05-15 02:53:55 INFO  Servlet:47 - Servlet.doGet; commandName ==> getStatistics
+2022-05-15 02:53:56 INFO  Servlet:47 - Servlet.doGet; commandName ==> getHomePage
+2022-05-15 02:54:22 INFO  Servlet:64 - Servlet.destroy
+2022-05-15 02:57:02 INFO  Servlet:24 - Servlet.init
+2022-05-15 02:57:03 INFO  Servlet:47 - Servlet.doGet; commandName ==> null
+2022-05-15 02:57:04 INFO  Servlet:47 - Servlet.doGet; commandName ==> null
+2022-05-15 02:57:07 INFO  Servlet:47 - Servlet.doGet; commandName ==> getHomePage
+2022-05-15 02:57:08 INFO  Servlet:47 - Servlet.doGet; commandName ==> getExhibitions
+2022-05-15 02:57:10 INFO  Servlet:47 - Servlet.doGet; commandName ==> getExhibitions

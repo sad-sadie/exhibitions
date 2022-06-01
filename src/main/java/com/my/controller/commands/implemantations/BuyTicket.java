@@ -8,7 +8,7 @@ import javax.servlet.http.HttpServletRequest;
 
 public class BuyTicket implements Command {
 
-    private UserService userService;
+    private final UserService userService;
 
     public BuyTicket(UserService userService) {
         this.userService = userService;

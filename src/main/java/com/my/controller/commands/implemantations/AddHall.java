@@ -10,7 +10,7 @@ import java.util.List;
 
 public class AddHall implements Command {
 
-    private HallService hallService;
+    private final HallService hallService;
 
     public AddHall(HallService hallService) {
         this.hallService = hallService;

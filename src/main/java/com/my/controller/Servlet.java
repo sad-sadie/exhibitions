@@ -20,7 +20,7 @@ public class Servlet extends HttpServlet {
     private static final Logger log = Logger.getLogger(Servlet.class);
 
     @Override
-    public void init() throws ServletException {
+    public void init() {
         log.info("Servlet.init");
     }
 

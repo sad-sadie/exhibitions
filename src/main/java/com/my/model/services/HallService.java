@@ -9,8 +9,8 @@ import java.util.Optional;
 
 public class HallService {
 
-    private DaoFactory daoFactory = DaoFactory.getInstance();
-    private HallDao hallDao = daoFactory.createHallDao();
+    private final DaoFactory daoFactory = DaoFactory.getInstance();
+    private final HallDao hallDao = daoFactory.createHallDao();
 
     public List<Hall> findAllHalls() {
         return hallDao.findAll();

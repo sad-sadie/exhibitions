@@ -7,7 +7,7 @@ import javax.servlet.http.HttpServletRequest;
 
 public class CancelExhibition implements Command {
 
-    private ExhibitionService exhibitionService;
+    private final ExhibitionService exhibitionService;
 
     public CancelExhibition(ExhibitionService exhibitionService) {
         this.exhibitionService = exhibitionService;

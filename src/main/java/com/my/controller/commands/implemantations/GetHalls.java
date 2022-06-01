@@ -6,14 +6,12 @@ import com.my.model.services.HallService;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
-import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
-import java.util.stream.Collectors;
 
 public class GetHalls implements Command {
 
-    private HallService hallService = new HallService();
+    private HallService hallService;
 
     public GetHalls(HallService hallService) {
         this.hallService = hallService;

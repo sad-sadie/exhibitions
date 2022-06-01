@@ -9,7 +9,7 @@ import javax.servlet.http.HttpServletRequest;
 
 public class Registration implements Command {
 
-    private UserService userService;
+    private final UserService userService;
 
     public Registration(UserService userService) {
         this.userService = userService;
@@ -20,10 +20,6 @@ public class Registration implements Command {
         String email = request.getParameter("email");
         String login = request.getParameter("login");
         String password = request.getParameter("password");
-
-        if(login.equals("vova")) {
-            System.out.println("hi");
-        }
 
         if (email == null || email.equals("")) {
             request.getSession().setAttribute("error", "registrationEmail");

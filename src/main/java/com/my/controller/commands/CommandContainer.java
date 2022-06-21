@@ -5,6 +5,7 @@ import com.my.model.services.ExhibitionService;
 import com.my.model.services.HallService;
 import com.my.model.services.UserService;
 
+import javax.servlet.http.HttpServletRequest;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -37,5 +38,9 @@ public class CommandContainer {
 
     public static Command getCommand(String command) {
         return commands.get(command);
+    }
+
+    public static String doCommand(Command command, HttpServletRequest request) {
+        return command.execute(request);
     }
 }

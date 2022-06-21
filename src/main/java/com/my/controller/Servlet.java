@@ -50,7 +50,8 @@ public class Servlet extends HttpServlet {
             request.getRequestDispatcher(page).forward(request, response);
         } else {
             Command command = CommandContainer.getCommand(commandName);
-            page = command.execute(request);
+            page = CommandContainer.doCommand(command, request);
+
             if (page.contains("redirect")) {
                 response.sendRedirect(page.replace("redirect:",""));
             } else {
